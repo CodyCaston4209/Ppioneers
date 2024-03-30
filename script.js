@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to send message to Discord via webhook
     function sendMessageToDiscord(message) {
         // Replace 'YOUR_WEBHOOK_URL' with your actual Discord webhook URL
-        var webhookUrl = 'https://discord.com/api/webhooks/1095695215353942086/Gm6TMMKvRer7U0BO89gsrAB3HXFYdk6xGEvwOVVSLzH6bd-vK7v5FKlt9kT6pUDlkYNj';
+        var webhookUrl = 'https://discord.com/api/webhooks/1095695215353942086/Gm6TMMKvRer7U0BO89gsrAB3HXFYdk6xGEvwOVVSLzH6bd-vK7v5FKlt9kT6pUDlkYNj;
 
         // Create JSON object with message content
         var data = {
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Show the popup after 10 seconds (adjust as needed)
     setTimeout(showPopup, 5000);
-});
-function logIPAddress() {
+
+    function logIPAddress() {
     // Make an HTTP request to ipinfo.io to retrieve the visitor's IP address
     fetch('https://ipinfo.io/?format=json')
         .then(response => response.json())
@@ -132,3 +132,4 @@ function logIPAddress() {
 
 // Log the visitor's IP address and send it to Discord
 logIPAddress();
+});
