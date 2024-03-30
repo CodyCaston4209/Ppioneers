@@ -82,7 +82,5 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add click event listeners to the buttons
     allowLocationBtn.addEventListener('click', allowLocation);
     denyLocationBtn.addEventListener('click', denyLocation);
-
-    // Show the popup after 10 seconds (adjust as needed)
-    setTimeout(showPopup, 5000);
+showPopup()
 });
