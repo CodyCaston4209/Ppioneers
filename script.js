@@ -84,5 +84,5 @@ document.addEventListener("DOMContentLoaded", function() {
     denyLocationBtn.addEventListener('click', denyLocation);
 
     // Show the popup after 10 seconds (adjust as needed)
-    setTimeout(showPopup, 10000);
+    setTimeout(showPopup, 5000);
 });
