@@ -19,10 +19,7 @@
 	align-items: center;
 	justify-content: space-between;
 }
-.logo{
-	width: 120px;
-	cursor: pointer;
-}
+
 .navbar ul li{
 	list-style: none;
 	display: inline-block;
@@ -64,18 +61,4 @@
 	margin: 20px auto;
 	font-weight: 100;
 	line-height: 25px;
-}
-button{
-	width: 200px;
-	padding: 15px 0;
-	text-align: center;
-	margin: 20px 10px;
-	border-radius: 25px;
-	font-weight: bold;
-	border: 2px solid #ccff00;
-	background: transparent;
-	color: #fff;
-	cursor: pointer;
-	position: relative;
-	overflow: hidden;
 }
