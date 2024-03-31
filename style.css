@@ -52,24 +52,6 @@
     width: 100%;
 }
 
-/* Content Styles */
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    font-size: 30px;
-    margin-top: 70px;
-}
-
-.content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-
 /* Popup Styles */
 .popup {
     display: none;
@@ -82,18 +64,23 @@
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 9999;
+    width: 400px; /* Set the desired width of the popup */
 }
 
 .popup-content {
     text-align: center;
+    position: relative;
 }
 
 .popup-content h2 {
     margin-top: 0;
 }
 
-.popup-content p {
-    margin-bottom: 10px;
+.popup-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px; /* Add space between image and buttons */
+    clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
 }
 
 .popup-content button {
@@ -103,8 +90,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-right: 10px; /* Add spacing between buttons */
 }
 
-.popup-content button:hover {
-    background-color: #0056b3;
+.popup-content button:last-child {
+    margin-right: 0; /* Remove margin from the last button */
 }
