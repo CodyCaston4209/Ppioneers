@@ -52,25 +52,6 @@
     width: 100%;
 }
 
-/* Content Styles */
-.content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-    font-size: 30px;
-    margin-top: 70px;
-}
-
-.content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-
-
 /* Popup Styles */
 .popup {
     display: none;
@@ -78,18 +59,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Soft shadow */
     z-index: 9999;
-    width: 400px; /* Set the desired width of the popup */
-    max-width: calc(100% - 40px); /* Limit maximum width to prevent overflow */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 400px; /* Limit maximum width to prevent overflow */
+    color: #fff; /* Text color */
 }
 
 .popup-content {
     text-align: center;
-    position: relative;
 }
 
 .popup-content h2 {
@@ -100,17 +81,18 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 20px; /* Add space between image and buttons */
-    clip-path: polygon(0 25%, 100% 25%, 100% 100%, 0% 100%);
+    border-radius: 10px; /* Rounded corners for the image */
+     clip-path: polygon(0 25%, 100% 25%, 100% 100%, 0% 100%);
 }
 
 .popup-content button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
+    background-color: #ccff00; /* Match the color scheme */
+    color: #000; /* Text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Add spacing between buttons */
+    margin: 0 5px; /* Add spacing between buttons */
 }
 
 .popup-content button:last-child {
