@@ -65,6 +65,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     width: 400px; /* Set the desired width of the popup */
+    max-width: calc(100% - 40px); /* Limit maximum width to prevent overflow */
 }
 
 .popup-content {
