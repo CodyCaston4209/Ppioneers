@@ -52,6 +52,25 @@
     width: 100%;
 }
 
+/* Content Styles */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 70px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+
 /* Popup Styles */
 .popup {
     display: none;
